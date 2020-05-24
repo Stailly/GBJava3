@@ -1,0 +1,4 @@
+rootProject.name = 'Java3'
+include 'NetworkClient'
+include 'NetworkServer'
+
