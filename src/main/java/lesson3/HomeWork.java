@@ -1,12 +1,9 @@
 package lesson3;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Enumeration;
-import java.util.List;
+import java.nio.file.Files;
+import java.util.*;
 
-// Сделать клиен-серверное приложение. Передать по сети сеарилизованный объект.
 public class HomeWork {
     public static void main(String[] args) throws IOException {
 //        taskOne();
@@ -41,12 +38,9 @@ public class HomeWork {
     }
 
     private static void taskOne() {
-        try (FileInputStream inputStream = new FileInputStream("text/test2.txt")) {
-            byte[] arr = new byte[100];
-            int x;
-            while ((x = inputStream.read(arr)) > 0) {
-                System.out.println(new String(arr, 0, x));
-            }
+        try {
+            byte[] arr = Files.readAllBytes(new File("text/test2.txt").toPath());
+            System.out.println(Arrays.toString(arr));
         } catch (IOException e) {
             e.printStackTrace();
         }
