@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Enumeration;
+import java.util.List;
 
 // Сделать клиен-серверное приложение. Передать по сети сеарилизованный объект.
 public class HomeWork {
@@ -30,7 +31,7 @@ public class HomeWork {
     }
 
     private static void taskTwo() throws FileNotFoundException {
-        ArrayList<InputStream> list = new ArrayList<>();
+        List<InputStream> list = new ArrayList<>();
         list.add(new FileInputStream("text/test.txt"));
         list.add(new FileInputStream("text/test2.txt"));
         list.add(new FileInputStream("text/test3.txt"));
